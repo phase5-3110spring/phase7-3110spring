@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <title>destination url reader</title>
+        <meta charset="UTF-8">
+   </head>
+    <body>
+        <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="zgphase6.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Detail</li>
+                </ol>
+        </nav>
+        
+        <h3>Game Detail</h3>
+        <p id="status"></p>
+
+       <!-- <p>URL parameter #1: </p>
+       <p id="k"></p>
+       <p>Caption #2: </p>
+       <p id="c" ></p>
+       <p>Description #3: </p> -->
+       <p id="d"></p>
+       <button onclick=backFunction()>Back</button>
+
+      <div>
+            <p id="output">
+
+            </p>
+        </div>
+    </body>
+
+        <script>
+        var url = window.location.href; //step 1
+        var like = "https://s3-us-west-2.amazonaws.com/3110phase1/phase04/like.png";
+
+        console.log("url = " + url);
+        var x = breakUpURLParameters(url); 
+            console.log(x.search);
+	        console.log("img url  = " + x.search.img);
+
+        // document.getElementById("k").innerHTML = x.search.img;
+        // document.getElementById("output").innerHTML = "total url was " +  url;//show whole URL
+        
+
+        var t = document.getElementById("output");
+        var y = document.createElement("img");
+        y.setAttribute("src", x.search.img);
+        y.setAttribute("class", "img-fluid");
+        t.appendChild(y);//show picture
+
+        function breakUpURLParameters(url) {
+            
+            var link = document.createElement('a');
+            link.setAttribute('href', url);
+            console.log("path variable is " + url);
+            
+            return {
+                host:     link.hostname,  
+                port:     link.port,      
+                search:   mapMaker(link.search),
+                path:     link.pathname,  
+                protocol: link.protocol   
+            }
+        }
+        
+        function mapMaker(search, preserveDuplicates) {
+            
+            preserveDuplicates = preserveDuplicates || false;  
+            var outputNoDupes = {};
+            var returnableArray = [];
+            
+            if(!search) throw new Error('mapMaker: your search input param is misformed?');
+            
+            search = search.split('?')[1];
+            search = search.split('&');
+            // Mar 21
+            // console.log(search [0]);
+            // console.log(search [1]);
+            // console.log(search [2]);
+
+            console.log("decode",decode(search[1])); // Show index[1] in console
+
+            var title = document.getElementById("c");
+            // title.innerHTML = noEqual(decode(search[1]));
+            var description2 = document.getElementById("d");
+            description2.innerHTML = noEqual(decode(search[2]));
+            
+            console.log(search[3]);
+            var i = noEqual(search[3]);
+            console.log(i);
+            var checkC = checkUnexpiredCookie(i);
+            if (checkC == "y")
+            {
+                var likeIcon = document.createElement("img");
+                likeIcon.setAttribute("class", "img-thumbnail");
+                likeIcon.setAttribute("src", like);
+                document.getElementById("output").appendChild(likeIcon);
+            }
+
+            returnableArray = search.map(function(keyval)
+            {
+                var out = {};
+                keyval = keyval.split('=');
+                out[keyval[0]] = keyval[1];
+                outputNoDupes[keyval[0]] = keyval[1]; 
+                return out;
+            });
+            return (preserveDuplicates) ? returnableArray : outputNoDupes;
+        }
+
+        function decode(str)
+            {
+            var outputDescription = "";
+            var strArr = str.split("%20");
+            for(var i = 0; i <strArr.length; i++){
+                outputDescription = outputDescription + strArr[i]+ " ";
+            }
+            return outputDescription;
+        }
+
+        function noEqual(str)
+            {
+            return str.split("=")[1]
+            }
+
+        function backFunction(){
+            window.location.href="zgphase6.html";
+        }
+
+        function getCookie(cookieName)
+        {
+        var name = cookieName + "=";
+        var ca = document.cookie.split(";");
+
+        for(var i=0; i<ca.length; i++)
+        {   
+            var c = ca[i];
+            while (c.charAt(0)==' ')c=c.substring(1);
+            if(c.indexOf(name)==0)
+            {
+                return c.substring(name.length, c.length);
+            }
+        }
+            return "";
+        }
+
+        function checkCookie(cookieName)
+        {
+            var likeIcon=getCookie(cookieName);
+            if (likeIcon != "") 
+                alert("You like this one already!"); 
+            else 
+            setCookie(cookieName, 1, 30);//cookieValue
+        }
+        function checkUnexpiredCookie(cookieName)
+        {
+            var likeIcon = getCookie(cookieName);
+            if(likeIcon !="")
+                return "y";
+            else
+                return "n";
+        }
+
+        </script>      
+	
+</html>
