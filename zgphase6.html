@@ -138,11 +138,11 @@ var listList3 = document.createElement("li");
 var list1 = document.createElement("a");
 list1.setAttribute("href",".html");//put in link
 list1.setAttribute("class","text-white");
-list1.innerHTML = "Terms of us";
+list1.innerHTML = "Terms of Use";
 var list2 = document.createElement("a");
 list2.setAttribute("href",".html");//put in link
 list2.setAttribute("class","text-white");
-list2.innerHTML = "Contact us";
+list2.innerHTML = "Contact Us";
 var list3 = document.createElement("a");
 list3.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/CompanyOverview.html");//put in link
 list3.setAttribute("class","text-white");
@@ -183,16 +183,16 @@ navbarOffer.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase
 navbarOffer.setAttribute("class","navbar-brand d-flex align-items-center");
 navbarOffer.innerHTML = "Special Offers";
 
-var navbarVehicles = document.createElement("div");
-navbarVehicles.setAttribute("class","dropdown");
+var navbarInfo = document.createElement("div");
+navbarInfo.setAttribute("class","dropdown");
 
-var vehicles = document.createElement("button");
-vehicles.setAttribute("class","btn btn-dark dropdown-toggle");
-vehicles.setAttribute("id","groupDrop");
-vehicles.setAttribute("data-toggle","dropdown");
-vehicles.setAttribute("aria-haspopup","true");
-vehicles.setAttribute("aria-expanded","false");
-vehicles.innerHTML = "Vehicles";
+var info = document.createElement("button");
+info.setAttribute("class","btn btn-dark dropdown-toggle");
+info.setAttribute("id","groupDrop");
+info.setAttribute("data-toggle","dropdown");
+info.setAttribute("aria-haspopup","true");
+info.setAttribute("aria-expanded","false");
+info.innerHTML = "Information";
 
 var navbarEvent = document.createElement("a");
 navbarEvent.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/Events.html");//put in link
@@ -218,8 +218,8 @@ dropdownItem3.innerHTML = "Sedan";
 dropdownMenu.appendChild(dropdownItem1);
 dropdownMenu.appendChild(dropdownItem2);
 dropdownMenu.appendChild(dropdownItem3);
-navbarVehicles.appendChild(vehicles);
-navbarVehicles.appendChild(dropdownMenu);
+navbarInfo.appendChild(info);
+navbarInfo.appendChild(dropdownMenu);
 
 
 var navbarButton = document.createElement("button");
@@ -238,7 +238,7 @@ navbarDiv.appendChild(navbarHome);
 navbarDiv.appendChild(navbarBest);
 navbarDiv.appendChild(navbarOffer);
 navbarDiv.appendChild(navbarEvent);
-navbarDiv.appendChild(navbarVehicles);
+navbarDiv.appendChild(navbarInfo);
 
 navbarDiv.appendChild(navbarButton);
 navbar.appendChild(navbarDiv);
