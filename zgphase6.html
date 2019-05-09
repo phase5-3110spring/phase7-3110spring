@@ -173,10 +173,10 @@ navbarHome.setAttribute("href","");//put in link
 navbarHome.setAttribute("class","navbar-brand d-flex align-items-center");
 navbarHome.innerHTML = "Home";
 
-var navbarResearch = document.createElement("a");
-navbarResearch.setAttribute("href","#");//put in link
-navbarResearch.setAttribute("class","navbar-brand d-flex align-items-center");
-navbarResearch.innerHTML = "Research Articles";
+var navbarBest = document.createElement("a");
+navbarBest.setAttribute("href","#");//put in link
+navbarBest.setAttribute("class","navbar-brand d-flex align-items-center");
+navbarBest.innerHTML = "Bestsellers";
 
 var navbarOffer = document.createElement("a");
 navbarOffer.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/SpecialOffers.html");//put in link
@@ -235,7 +235,7 @@ buttonIcon.setAttribute("class","navbar-toggler-icon");
 navbarButton.appendChild(buttonIcon);
 
 navbarDiv.appendChild(navbarHome);
-navbarDiv.appendChild(navbarResearch);
+navbarDiv.appendChild(navbarBest);
 navbarDiv.appendChild(navbarOffer);
 navbarDiv.appendChild(navbarEvent);
 navbarDiv.appendChild(navbarVehicles);
