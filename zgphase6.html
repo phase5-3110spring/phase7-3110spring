@@ -10,26 +10,26 @@
           <li class="breadcrumb-item active" aria-current="page">Home</li>
         </ol>
       </nav> -->
-</body>  
+</body>
 
 <script>
 
 var images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"];
 
 var caption = [
-    "The Witcher 3: Wild Hunt", 
-    "Sekiro: Shadows Die Twice", 
-    "Anno 1800", 
-    "The Legend of Zelda: Breath of the Wild", 
-    "DARK SOULS III", 
+    "The Witcher 3: Wild Hunt",
+    "Sekiro: Shadows Die Twice",
+    "Anno 1800",
+    "The Legend of Zelda: Breath of the Wild",
+    "DARK SOULS III",
     "Metal Gear Solid V: The Phantom Pain"];
 
 var description = [
-    "The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt.", 
-    "Sekiro: Shadows Die Twice is an action-adventure video game developed by FromSoftware and published by Activision.", 
-    "Anno 1800 is a city building real-time strategy video game, developed by Blue Byte and published by Ubisoft", 
-    "The Legend of Zelda: Breath of the Wild is an action-adventure game developed and published by Nintendo.", 
-    "Dark Souls III is an action role-playing video game developed by FromSoftware and published by Bandai Namco Entertainment.", 
+    "The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt.",
+    "Sekiro: Shadows Die Twice is an action-adventure video game developed by FromSoftware and published by Activision.",
+    "Anno 1800 is a city building real-time strategy video game, developed by Blue Byte and published by Ubisoft",
+    "The Legend of Zelda: Breath of the Wild is an action-adventure game developed and published by Nintendo.",
+    "Dark Souls III is an action role-playing video game developed by FromSoftware and published by Bandai Namco Entertainment.",
     "Metal Gear Solid V: The Phantom Pain is an action-adventure stealth game developed by Kojima Productions and published by Konami."
     ];
 
@@ -83,9 +83,9 @@ list2.setAttribute("href",".html");//put in link
 list2.setAttribute("class","text-white");
 list2.innerHTML = "Contact us";
 var list3 = document.createElement("a");
-list3.setAttribute("href",".html");//put in link
+list3.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/CompanyOverview.html");//put in link
 list3.setAttribute("class","text-white");
-list3.innerHTML = "Company overview";
+list3.innerHTML = "Company Overview";
 
 listList1.appendChild(list1);
 listList2.appendChild(list2);
@@ -118,7 +118,7 @@ navbarResearch.setAttribute("class","navbar-brand d-flex align-items-center");
 navbarResearch.innerHTML = "Research Articles";
 
 var navbarOffer = document.createElement("a");
-navbarOffer.setAttribute("href","#");//put in link
+navbarOffer.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/SpecialOffers.html");//put in link
 navbarOffer.setAttribute("class","navbar-brand d-flex align-items-center");
 navbarOffer.innerHTML = "Special Offers";
 
@@ -133,10 +133,10 @@ vehicles.setAttribute("aria-haspopup","true");
 vehicles.setAttribute("aria-expanded","false");
 vehicles.innerHTML = "Vehicles";
 
-var navbarOwners = document.createElement("a");
-navbarOwners.setAttribute("href","#");//put in link
-navbarOwners.setAttribute("class","navbar-brand d-flex align-items-center");
-navbarOwners.innerHTML = "Owners";
+var navbarEvent = document.createElement("a");
+navbarEvent.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/Events.html");//put in link
+navbarEvent.setAttribute("class","navbar-brand d-flex align-items-center");
+navbarEvent.innerHTML = "Events";
 
 var dropdownMenu = document.createElement("div");
 dropdownMenu.setAttribute("class","dropdown-menu");
@@ -164,7 +164,7 @@ navbarVehicles.appendChild(dropdownMenu);
 var navbarButton = document.createElement("button");
 navbarButton.setAttribute("class","navbar-toggler collapsed");
 navbarButton.setAttribute("data-toggle", "collapse");
-navbarButton.setAttribute("data-target", "#navbarHeader"); 
+navbarButton.setAttribute("data-target", "#navbarHeader");
 navbarButton.setAttribute("aria-controls", "navbarHeader");
 navbarButton.setAttribute("aria-expanded","true");
 navbarButton.setAttribute("aria-label","Toggle navigation");
@@ -176,8 +176,8 @@ navbarButton.appendChild(buttonIcon);
 navbarDiv.appendChild(navbarHome);
 navbarDiv.appendChild(navbarResearch);
 navbarDiv.appendChild(navbarOffer);
+navbarDiv.appendChild(navbarEvent);
 navbarDiv.appendChild(navbarVehicles);
-navbarDiv.appendChild(navbarOwners);
 
 navbarDiv.appendChild(navbarButton);
 navbar.appendChild(navbarDiv);
@@ -304,7 +304,7 @@ for(var i=0; i<images.length; i++)
 
     var col = document.createElement("div");
     col.setAttribute("class", "col-sm-4");
-    
+
     var title = document.createTextNode(caption[i]);
     var l = document.createElement("p");
     l.setAttribute("class","card-title");
@@ -381,7 +381,7 @@ for(var i=0; i<images.length; i++)
 
     imgDiv.appendChild(buttonGroup);
     imgDiv.appendChild(collapseDetail);
- 
+
     if (checkC == "y")
     {
         var likeIcon = document.createElement("img");
@@ -431,20 +431,20 @@ function getCookie(cookieName)
 
 function checkCookie(cookieName)
 {
-    
+
     var likeIcon=getCookie(cookieName);
 
-    if (likeIcon != "") 
+    if (likeIcon != "")
     {
         // alert("You like this one already!");
         setCookie(cookieName,"1",-1);
         window.location.reload();
         return "";
-    } 
-    else 
+    }
+    else
     {
         setCookie(cookieName, 1, 30);//cookieValue
-       
+
     }
 }
 
