@@ -113,6 +113,7 @@ contactList.setAttribute("class","list-unstyled");
 var listList1 = document.createElement("li");
 var listList2 = document.createElement("li");
 var listList3 = document.createElement("li");
+var listList4 = document.createElement("li");
 var list1 = document.createElement("a");
 list1.setAttribute("href",".html");//put in link
 list1.setAttribute("class","text-white");
@@ -125,12 +126,18 @@ var list3 = document.createElement("a");
 list3.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/CompanyOverview.html");//put in link
 list3.setAttribute("class","text-white");
 list3.innerHTML = "Company Overview";
+var list4 = document.createElement("a");
+list4.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110.spring/Phase+7/CompanyOverview.html");//put in link
+list4.setAttribute("class","text-white");
+list4.innerHTML = "About Us";
 listList1.appendChild(list1);
 listList2.appendChild(list2);
 listList3.appendChild(list3);
+listList4.appendChild(list4);
 contactList.appendChild(listList1);
 contactList.appendChild(listList2);
 contactList.appendChild(listList3);
+contactList.appendChild(listList4);
 contact.appendChild(contactTitle);
 contact.appendChild(contactList);
 navbarHeaderRow.appendChild(about);
@@ -166,6 +173,8 @@ var navbarEvent = document.createElement("a");
 navbarEvent.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/Events.html");//put in link
 navbarEvent.setAttribute("class","navbar-brand d-flex align-items-center");
 navbarEvent.innerHTML = "Events";
+
+
 var dropdownMenu = document.createElement("div");
 dropdownMenu.setAttribute("class","dropdown-menu");
 dropdownMenu.setAttribute("aria-labelledby","groupDrop");
@@ -181,9 +190,34 @@ var dropdownItem3 = document.createElement("a");
 dropdownItem3.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110phase1/phase06/privacyPage.html");//put in link
 dropdownItem3.setAttribute("class","dropdown-item");
 dropdownItem3.innerHTML = "Privacy Policy";
+
+var dropdownItem4 = document.createElement("a");
+dropdownItem4.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110.spring/Phase+7/PC.html");//put in link
+dropdownItem4.setAttribute("class","dropdown-item");
+dropdownItem4.innerHTML = "PC";
+var dropdownItem5 = document.createElement("a");
+dropdownItem5.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110.spring/Phase+7/Xbox.html");//put in link
+dropdownItem5.setAttribute("class","dropdown-item");
+dropdownItem5.innerHTML = "Xbox";
+var dropdownItem6 = document.createElement("a");
+dropdownItem6.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110.spring/Phase+7/PS4.html");//put in link
+dropdownItem6.setAttribute("class","dropdown-item");
+dropdownItem6.innerHTML = "PS4";
+
+var dropdownItem7 = document.createElement("a");
+dropdownItem7.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110.spring/Phase+7/FAQ.html");//put in link
+dropdownItem7.setAttribute("class","dropdown-item");
+dropdownItem7.innerHTML = "FAQ";
+
+
 dropdownMenu.appendChild(dropdownItem1);
 dropdownMenu.appendChild(dropdownItem2);
 dropdownMenu.appendChild(dropdownItem3);
+dropdownMenu.appendChild(dropdownItem4);
+dropdownMenu.appendChild(dropdownItem5);
+dropdownMenu.appendChild(dropdownItem6);
+dropdownMenu.appendChild(dropdownItem7);
+
 navbarInfo.appendChild(info);
 navbarInfo.appendChild(dropdownMenu);
 var navbarButton = document.createElement("button");
