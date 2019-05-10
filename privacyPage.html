@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+</body>  
+
+<script>
+var navbarHeader = document.createElement("div");
+navbarHeader.setAttribute("class","bg-dark collapse");
+navbarHeader.setAttribute("id","navbarHeader");
+
+var navbarHeaderDiv = document.createElement("div");
+navbarHeaderDiv.setAttribute("class","container");
+var navbarHeaderRow = document.createElement("div");
+navbarHeaderRow.setAttribute("class","row");
+
+var about = document.createElement("div");
+about.setAttribute("class","col-sm-8 col-md-7 py-4");
+
+var aboutTitle = document.createElement("h4");
+aboutTitle.setAttribute("class","text-white");
+aboutTitle.innerHTML = "About";
+
+var aboutText = document.createElement("P");
+aboutText.setAttribute("class","text-muted");
+aboutText.innerHTML = "our company ........blablabla";//put in about text
+
+about.appendChild(aboutTitle);
+about.appendChild(aboutText);
+
+var contact = document.createElement("div");
+contact.setAttribute("class","col-sm-4 offset-md-1 py-4");
+var contactTitle = document.createElement("h4");
+contactTitle.setAttribute("class","text-white");
+contactTitle.innerHTML = "Contact";
+
+var contactList = document.createElement("ul");
+contactList.setAttribute("class","list-unstyled");
+
+var listList1 = document.createElement("li");
+var listList2 = document.createElement("li");
+var listList3 = document.createElement("li");
+
+var list1 = document.createElement("a");
+list1.setAttribute("href",".html");//put in link
+list1.setAttribute("class","text-white");
+list1.innerHTML = "Terms of us";
+var list2 = document.createElement("a");
+list2.setAttribute("href",".html");//put in link
+list2.setAttribute("class","text-white");
+list2.innerHTML = "Contact us";
+var list3 = document.createElement("a");
+list3.setAttribute("href",".html");//put in link
+list3.setAttribute("class","text-white");
+list3.innerHTML = "Company overview";
+
+listList1.appendChild(list1);
+listList2.appendChild(list2);
+listList3.appendChild(list3);
+contactList.appendChild(listList1);
+contactList.appendChild(listList2);
+contactList.appendChild(listList3);
+contact.appendChild(contactTitle);
+contact.appendChild(contactList);
+
+navbarHeaderRow.appendChild(about);
+navbarHeaderRow.appendChild(contact);
+navbarHeaderDiv.appendChild(navbarHeaderRow);
+navbarHeader.appendChild(navbarHeaderDiv);
+
+
+var navbar = document.createElement("div");
+navbar.setAttribute("class","navbar navbar-dark bg-dark shadow-sm");
+var navbarDiv = document.createElement("div");
+navbarDiv.setAttribute("class","container d-flex justify-content-between");
+
+var navbarHome = document.createElement("a");
+navbarHome.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110phase1/phase06/zgphase6.html");//put in link
+navbarHome.setAttribute("class","navbar-brand d-flex align-items-center");
+navbarHome.innerHTML = "Home";
+
+var navbarResearch = document.createElement("a");
+navbarResearch.setAttribute("href","#");//put in link
+navbarResearch.setAttribute("class","navbar-brand d-flex align-items-center");
+navbarResearch.innerHTML = "Research Articles";
+
+var navbarOffer = document.createElement("a");
+navbarOffer.setAttribute("href","#");//put in link
+navbarOffer.setAttribute("class","navbar-brand d-flex align-items-center");
+navbarOffer.innerHTML = "Special Offers";
+
+var navbarVehicles = document.createElement("div");
+navbarVehicles.setAttribute("class","dropdown");
+
+var vehicles = document.createElement("button");
+vehicles.setAttribute("class","btn btn-dark dropdown-toggle");
+vehicles.setAttribute("id","groupDrop");
+vehicles.setAttribute("data-toggle","dropdown");
+vehicles.setAttribute("aria-haspopup","true");
+vehicles.setAttribute("aria-expanded","false");
+vehicles.innerHTML = "Vehicles";
+
+var navbarOwners = document.createElement("a");
+navbarOwners.setAttribute("href","#");//put in link
+navbarOwners.setAttribute("class","navbar-brand d-flex align-items-center");
+navbarOwners.innerHTML = "Owners";
+
+var dropdownMenu = document.createElement("div");
+dropdownMenu.setAttribute("class","dropdown-menu");
+dropdownMenu.setAttribute("aria-labelledby","groupDrop");
+var dropdownItem1 = document.createElement("a");
+dropdownItem1.setAttribute("href","#");//put in link
+dropdownItem1.setAttribute("class","dropdown-item");
+dropdownItem1.innerHTML = "SUV";
+var dropdownItem2 = document.createElement("a");
+dropdownItem2.setAttribute("href","#");//put in link
+dropdownItem2.setAttribute("class","dropdown-item");
+dropdownItem2.innerHTML = "Couple";
+var dropdownItem3 = document.createElement("a");
+dropdownItem3.setAttribute("href","#");//put in link
+dropdownItem3.setAttribute("class","dropdown-item");
+dropdownItem3.innerHTML = "Sedan";
+
+dropdownMenu.appendChild(dropdownItem1);
+dropdownMenu.appendChild(dropdownItem2);
+dropdownMenu.appendChild(dropdownItem3);
+navbarVehicles.appendChild(vehicles);
+navbarVehicles.appendChild(dropdownMenu);
+
+
+var navbarButton = document.createElement("button");
+navbarButton.setAttribute("class","navbar-toggler collapsed");
+navbarButton.setAttribute("data-toggle", "collapse");
+navbarButton.setAttribute("data-target", "#navbarHeader"); 
+navbarButton.setAttribute("aria-controls", "navbarHeader");
+navbarButton.setAttribute("aria-expanded","true");
+navbarButton.setAttribute("aria-label","Toggle navigation");
+
+var buttonIcon = document.createElement("span");
+buttonIcon.setAttribute("class","navbar-toggler-icon");
+navbarButton.appendChild(buttonIcon);
+
+navbarDiv.appendChild(navbarHome);
+navbarDiv.appendChild(navbarResearch);
+navbarDiv.appendChild(navbarOffer);
+navbarDiv.appendChild(navbarVehicles);
+navbarDiv.appendChild(navbarOwners);
+
+navbarDiv.appendChild(navbarButton);
+navbar.appendChild(navbarDiv);
+//navbar end
+
+var privacyPolicyJumbotron = document.createElement("div");
+privacyPolicyJumbotron.setAttribute("class","jumbotron text-center");
+
+var privacyPolicyDiv = document.createElement("div");
+privacyPolicyDiv.setAttribute("class","container");
+var privacyPolicyTitle = document.createElement("h1");
+privacyPolicyTitle.setAttribute("class","jumbotron-heading");
+privacyPolicyTitle.innerHTML = "PRIVACY POLICY";
+var privacyPolicyPart1 = document.createElement("P");
+privacyPolicyPart1.setAttribute("class","lead text-muted");
+privacyPolicyPart1.innerHTML = "At Game Den, we collect personal data to support our products and services, while respecting all applicable laws, including but not limited to the Personal Information Protection and Electronic Documents Act (PIPEDA), and regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016, directly applicable from May, 25th, 2018 (hereinafter, 'General Data Protection Regulation', or 'GDPR'). As defined in the GDPR, 'personal data' means any information relating to an identified or identifiable natural person, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.";
+var privacyPolicyPart2 = document.createElement("P");
+privacyPolicyPart2.setAttribute("class","lead text-muted");
+privacyPolicyPart2.innerHTML = "By using Game Den’s services, you authorize Game Den and its affiliated companies, such as but not limited to Game Den Entertainment SA, Game Den EMEA SAS, Game Den Inc., Game Den Mobile Games, Red Storm Entertainment Inc., and Blue Byte GmbH (collectively, 'Game Den' or 'we'), to process your personal data according to this Privacy Policy. If you do not accept the terms of this Privacy Policy, please refrain from using our online games or our games’ online functionalities, our websites, our mobile apps and any other online Game Den products and services (hereinafter 'Services').";
+var privacyPolicyPart3 = document.createElement("P");
+privacyPolicyPart3.setAttribute("class","lead text-muted");
+privacyPolicyPart3.innerHTML = "In accordance with this Privacy Policy, the Data controller is Game Den Entertainment, with its headquarters at 107 avenue Henri Fréville, 35200, Rennes, France.";
+var privacyPolicyPart4 = document.createElement("P");
+privacyPolicyPart4.setAttribute("class","lead text-muted");
+privacyPolicyPart4.innerHTML = "This Policy and the certification seal shown on the Services confirm that Game Den is a member in good standing of ESRB's Privacy Certified Program. ESRB's Privacy Certified Program is designed to ensure that our Services’ information disclosure practices are responsible and appropriate. As part of this privacy program, we are subject to frequent audits of our Services and other enforcement and accountability mechanisms administered independently by the ESRB.";
+var privacyPolicyPart5 = document.createElement("P");
+privacyPolicyPart5.setAttribute("class","lead text-muted");
+privacyPolicyPart5.innerHTML = "For any question related to your personal data processing and this Privacy Policy, please contact Game Den data protection officer at the following address: privacy@gameden.com.";
+
+privacyPolicyDiv.appendChild(privacyPolicyTitle);
+privacyPolicyDiv.appendChild(privacyPolicyPart1);
+privacyPolicyDiv.appendChild(privacyPolicyPart2);
+privacyPolicyDiv.appendChild(privacyPolicyPart3);
+privacyPolicyDiv.appendChild(privacyPolicyPart4);
+privacyPolicyDiv.appendChild(privacyPolicyPart5);
+privacyPolicyJumbotron.appendChild(privacyPolicyDiv);
+
+document.body.appendChild(navbarHeader);
+document.body.appendChild(navbar);
+document.body.appendChild(privacyPolicyJumbotron);
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+</body>  
+
+<script>
+
+var images = ["11.jpg", "12.jpg", "13.jpg", "14.jpg"];
+
+var caption = [
+    "Human: Fall Flat", 
+    "Grand Theft Auto V", 
+    "Borderlands 2", 
+    "Undertale"];
+
+var description = [
+    "Human: Fall Flat is a quirky open-ended physics-based puzzle platformer set in floating dreamscapes.", 
+    "Grand Theft Auto V is an action-adventure video game developed by Rockstar North and published by Rockstar Games.", 
+    "Borderlands 2 is an action role-playing first-person shooter video game developed by Gearbox Software and published by 2K Games.", 
+    "Undertale is a role-playing video game created by American indie developer Toby Fox.", 
+    ];
+
+var price =["$19.99","$19.99","$19.99","$19.99"];
+
+var url;
+
+
+var navbarHeader = document.createElement("div");
+navbarHeader.setAttribute("class","bg-dark collapse");
+navbarHeader.setAttribute("id","navbarHeader");
+
+var navbarHeaderDiv = document.createElement("div");
+navbarHeaderDiv.setAttribute("class","container");
+var navbarHeaderRow = document.createElement("div");
+navbarHeaderRow.setAttribute("class","row");
+
+var about = document.createElement("div");
+about.setAttribute("class","col-sm-8 col-md-7 py-4");
+
+var aboutTitle = document.createElement("h4");
+aboutTitle.setAttribute("class","text-white");
+aboutTitle.innerHTML = "About";
+
+var aboutText = document.createElement("P");
+aboutText.setAttribute("class","text-muted");
+aboutText.innerHTML = "our company ........blablabla";//put in about text
+
+about.appendChild(aboutTitle);
+about.appendChild(aboutText);
+
+var contact = document.createElement("div");
+contact.setAttribute("class","col-sm-4 offset-md-1 py-4");
+var contactTitle = document.createElement("h4");
+contactTitle.setAttribute("class","text-white");
+contactTitle.innerHTML = "Contact";
+
+var contactList = document.createElement("ul");
+contactList.setAttribute("class","list-unstyled");
+
+var listList1 = document.createElement("li");
+var listList2 = document.createElement("li");
+var listList3 = document.createElement("li");
+
+var list1 = document.createElement("a");
+list1.setAttribute("href",".html");//put in link
+list1.setAttribute("class","text-white");
+list1.innerHTML = "Terms of us";
+var list2 = document.createElement("a");
+list2.setAttribute("href",".html");//put in link
+list2.setAttribute("class","text-white");
+list2.innerHTML = "Contact us";
+var list3 = document.createElement("a");
+list3.setAttribute("href",".html");//put in link
+list3.setAttribute("class","text-white");
+list3.innerHTML = "Company overview";
+
+listList1.appendChild(list1);
+listList2.appendChild(list2);
+listList3.appendChild(list3);
+contactList.appendChild(listList1);
+contactList.appendChild(listList2);
+contactList.appendChild(listList3);
+contact.appendChild(contactTitle);
+contact.appendChild(contactList);
+
+navbarHeaderRow.appendChild(about);
+navbarHeaderRow.appendChild(contact);
+navbarHeaderDiv.appendChild(navbarHeaderRow);
+navbarHeader.appendChild(navbarHeaderDiv);
+
+
+var navbar = document.createElement("div");
+navbar.setAttribute("class","navbar navbar-dark bg-dark shadow-sm");
+var navbarDiv = document.createElement("div");
+navbarDiv.setAttribute("class","container d-flex justify-content-between");
+
+var navbarHome = document.createElement("a");
+navbarHome.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110phase1/phase06/zgphase6.html");//put in link
+navbarHome.setAttribute("class","navbar-brand d-flex align-items-center");
+navbarHome.innerHTML = "Home";
+
+var navbarResearch = document.createElement("a");
+navbarResearch.setAttribute("href","#");//put in link
+navbarResearch.setAttribute("class","navbar-brand d-flex align-items-center");
+navbarResearch.innerHTML = "Research Articles";
+
+var navbarOffer = document.createElement("a");
+navbarOffer.setAttribute("href","#");//put in link
+navbarOffer.setAttribute("class","navbar-brand d-flex align-items-center");
+navbarOffer.innerHTML = "Special Offers";
+
+var navbarVehicles = document.createElement("div");
+navbarVehicles.setAttribute("class","dropdown");
+
+var vehicles = document.createElement("button");
+vehicles.setAttribute("class","btn btn-dark dropdown-toggle");
+vehicles.setAttribute("id","groupDrop");
+vehicles.setAttribute("data-toggle","dropdown");
+vehicles.setAttribute("aria-haspopup","true");
+vehicles.setAttribute("aria-expanded","false");
+vehicles.innerHTML = "Vehicles";
+
+var navbarOwners = document.createElement("a");
+navbarOwners.setAttribute("href","#");//put in link
+navbarOwners.setAttribute("class","navbar-brand d-flex align-items-center");
+navbarOwners.innerHTML = "Owners";
+
+var dropdownMenu = document.createElement("div");
+dropdownMenu.setAttribute("class","dropdown-menu");
+dropdownMenu.setAttribute("aria-labelledby","groupDrop");
+var dropdownItem1 = document.createElement("a");
+dropdownItem1.setAttribute("href","#");//put in link
+dropdownItem1.setAttribute("class","dropdown-item");
+dropdownItem1.innerHTML = "SUV";
+var dropdownItem2 = document.createElement("a");
+dropdownItem2.setAttribute("href","#");//put in link
+dropdownItem2.setAttribute("class","dropdown-item");
+dropdownItem2.innerHTML = "Couple";
+var dropdownItem3 = document.createElement("a");
+dropdownItem3.setAttribute("href","#");//put in link
+dropdownItem3.setAttribute("class","dropdown-item");
+dropdownItem3.innerHTML = "Sedan";
+
+dropdownMenu.appendChild(dropdownItem1);
+dropdownMenu.appendChild(dropdownItem2);
+dropdownMenu.appendChild(dropdownItem3);
+navbarVehicles.appendChild(vehicles);
+navbarVehicles.appendChild(dropdownMenu);
+
+
+var navbarButton = document.createElement("button");
+navbarButton.setAttribute("class","navbar-toggler collapsed");
+navbarButton.setAttribute("data-toggle", "collapse");
+navbarButton.setAttribute("data-target", "#navbarHeader"); 
+navbarButton.setAttribute("aria-controls", "navbarHeader");
+navbarButton.setAttribute("aria-expanded","true");
+navbarButton.setAttribute("aria-label","Toggle navigation");
+
+var buttonIcon = document.createElement("span");
+buttonIcon.setAttribute("class","navbar-toggler-icon");
+navbarButton.appendChild(buttonIcon);
+
+navbarDiv.appendChild(navbarHome);
+navbarDiv.appendChild(navbarResearch);
+navbarDiv.appendChild(navbarOffer);
+navbarDiv.appendChild(navbarVehicles);
+navbarDiv.appendChild(navbarOwners);
+
+navbarDiv.appendChild(navbarButton);
+navbar.appendChild(navbarDiv);
+//navbar end
+
+var banner = document.createElement("div");
+banner.setAttribute("class","bd-example");
+banner.setAttribute("style","margin: 1rem;");
+// banner.setAttribute("class","jumbotron jumbotron-fluid");
+var bannerPic = document.createElement("img");
+bannerPic.setAttribute("src","https://s3-us-west-2.amazonaws.com/3110phase1/phase06/preOwnedBanner.png");
+bannerPic.setAttribute("class","img-fluid");
+bannerPic.setAttribute("style","width: 100%;");
+banner.appendChild(bannerPic);
+
+var preOwnedJumbotron = document.createElement("div");
+preOwnedJumbotron.setAttribute("class","jumbotron text-center");
+var preOwnedDiv = document.createElement("div");
+preOwnedDiv.setAttribute("class","container");
+var preOwnedTitle = document.createElement("h1");
+preOwnedTitle.setAttribute("class","jumbotron-heading");
+preOwnedTitle.innerHTML = "Pre-Owned";
+preOwnedDiv.appendChild(preOwnedTitle);
+preOwnedJumbotron.appendChild(preOwnedDiv);
+//end preOwned Title
+
+var albumDiv = document.createElement("div");
+albumDiv.setAttribute("class","album py-5 bg-light");
+
+var container = document.createElement("div");
+container.setAttribute("class","container");
+var like = "https://s3-us-west-2.amazonaws.com/3110phase1/phase04/like.png";
+
+var row = document.createElement("div");
+row.setAttribute("class", "row");
+
+
+for(var i=0; i<images.length; i++)
+{
+
+    var col = document.createElement("div");
+    col.setAttribute("class", "col-sm-6");
+    
+    var title = document.createTextNode(caption[i]);
+    var l = document.createElement("p");
+    l.setAttribute("class","card-title");
+
+    console.log("image in iteration is " + images[i]);
+    url = "https://s3-us-west-2.amazonaws.com/3110phase1/phase06/" + images[i];
+    urlOfDetailPage = "detailPage6.html?" + "img=" + url + "&Caption=" + caption[i] + "&Description=" + description[i] + "&i=" + i;
+
+    var imgDiv = document.createElement("div");
+    imgDiv.setAttribute("class", "card bg-light mb-3");
+
+    var imgInDiv = document.createElement("img");
+    imgInDiv.setAttribute("class","card-img-top");
+    imgInDiv.setAttribute("src", url);
+
+    var link = document.createElement("a");
+    link.setAttribute("href", urlOfDetailPage);
+
+    var descriptionForCar = document.createTextNode(description[i]);
+    var d = document.createElement("P");
+    d.setAttribute("class", "card-text");
+
+    var gamePrice = document.createTextNode(price[i]);
+    var p = document.createElement("P");
+    p.setAttribute("class","card-text");
+
+    var onclickParam = "addToCartAlert()";
+
+    var addToCartButton = document.createElement("button");
+    addToCartButton.setAttribute("class","btn btn-danger");
+    addToCartButton.setAttribute("onclick", onclickParam);
+    addToCartButton.innerHTML = "ADD TO CART";
+
+    l.appendChild(title);
+    link.appendChild(imgInDiv);
+    d.appendChild(descriptionForCar);
+    p.appendChild(gamePrice);
+
+    imgDiv.appendChild(link);//image link
+    imgDiv.appendChild(l);//caption
+    imgDiv.appendChild(d);//description
+    imgDiv.appendChild(p);
+    imgDiv.appendChild(addToCartButton);
+
+
+    col.appendChild(imgDiv);
+    row.appendChild(col);
+    container.appendChild(row);
+
+}
+albumDiv.appendChild(container);
+
+document.body.appendChild(navbarHeader);
+document.body.appendChild(navbar);
+document.body.appendChild(banner);
+// document.body.appendChild(preOwnedJumbotron);
+document.body.appendChild(albumDiv);
+
+function addToCartAlert(){
+    alert("You add game to cart!");
+}
+
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</html>
