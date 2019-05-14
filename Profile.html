@@ -5,31 +5,57 @@
 </head>
 
 <body>
-</body>  
+    <div id="navbar"><!-- This code decide the position of navbar, make sure it in front-->
+    </div>
+
+    
+ <br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12 lead">User profile<hr></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img class="img-circle avatar avatar-original" style="-webkit-user-select:none; 
+              display:block; margin:auto;" src="https://s3.amazonaws.com/3110.spring/Phase+7/download.png?size=120x120">
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 class="only-bottom-margin">John Doe</h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <span class="text-muted">Email:</span> email@test.com<br>
+                  <span class="text-muted">Birth date:</span> 01.01.2001<br>
+                  <span class="text-muted">Gender:</span> male<br><br>
+                  <small class="text-muted">Created: 05.14.2019</small>
+                </div>
+                <div class="col-md-6">
+                  
+                  </div>
+                </div>
+              </div>
+         
+          <div class="row">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+</body> 
 
 <script>
-
-var images = ["11.jpg", "12.jpg", "13.jpg", "14.jpg"];
-
-var caption = [
-    "Human: Fall Flat", 
-    "Grand Theft Auto V", 
-    "Borderlands 2", 
-    "Undertale"];
-
-var description = [
-    "Human: Fall Flat is a quirky open-ended physics-based puzzle platformer set in floating dreamscapes.", 
-    "Grand Theft Auto V is an action-adventure video game developed by Rockstar North and published by Rockstar Games.", 
-    "Borderlands 2 is an action role-playing first-person shooter video game developed by Gearbox Software and published by 2K Games.", 
-    "Undertale is a role-playing video game created by American indie developer Toby Fox.", 
-    ];
-
-var price =["$19.99","$19.99","$19.99","$19.99"];
-
-var url;
-
-
-var navbarHeader = document.createElement("div");
+    var navbarHeader = document.createElement("div");
     navbarHeader.setAttribute("class","bg-dark collapse");
     navbarHeader.setAttribute("id","navbarHeader");
     var navbarHeaderDiv = document.createElement("div");
@@ -58,9 +84,8 @@ var navbarHeader = document.createElement("div");
     var listList2 = document.createElement("li");
     var listList3 = document.createElement("li");
     var listList4 = document.createElement("li");
-    var listList5 = document.createElement("li");
-var list1 = document.createElement("a");
-list1.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/testtermsofuse.html");//put in link
+    var list1 = document.createElement("a");
+    list1.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/testtermsofuse.html");//put in link
 list1.setAttribute("class","text-white");
 list1.innerHTML = "Terms of Use";
 var list2 = document.createElement("a");
@@ -75,20 +100,14 @@ var list4 = document.createElement("a");
 list4.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/AboutUs.html");//put in link
 list4.setAttribute("class","text-white");
 list4.innerHTML = "About Us";
-var list5 = document.createElement("a");
-list5.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/testlogin.html");//put in link
-list5.setAttribute("class","text-white");
-list5.innerHTML = "Login";
 listList1.appendChild(list1);
 listList2.appendChild(list2);
 listList3.appendChild(list3);
 listList4.appendChild(list4);
-listList5.appendChild(list5);
 contactList.appendChild(listList1);
 contactList.appendChild(listList2);
 contactList.appendChild(listList3);
 contactList.appendChild(listList4);
-contactList.appendChild(listList5);
 contact.appendChild(contactTitle);
 contact.appendChild(contactList);
 navbarHeaderRow.appendChild(about);
@@ -137,7 +156,7 @@ var dropdownMenu = document.createElement("div");
 dropdownMenu.setAttribute("class","dropdown-menu");
 dropdownMenu.setAttribute("aria-labelledby","groupDrop");
 var dropdownItem1 = document.createElement("a");
-dropdownItem1.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/preOrder.html");//put in link
+dropdownItem1.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7preOrder.html");//put in link
 dropdownItem1.setAttribute("class","dropdown-item");
 dropdownItem1.innerHTML = "Pre-Order";
 var dropdownItem2 = document.createElement("a");
@@ -199,114 +218,18 @@ dropdownItem8.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/
     navbarDiv.appendChild(navbarInfo);
     navbarDiv.appendChild(navbarButton);
     navbar.appendChild(navbarDiv);
-//navbar end
-
-var banner = document.createElement("div");
-banner.setAttribute("class","bd-example");
-banner.setAttribute("style","margin: 1rem;");
-// banner.setAttribute("class","jumbotron jumbotron-fluid");
-var bannerPic = document.createElement("img");
-bannerPic.setAttribute("src","https://s3-us-west-2.amazonaws.com/3110phase1/phase06/preOwnedBanner.png");
-bannerPic.setAttribute("class","img-fluid");
-bannerPic.setAttribute("style","width: 100%;");
-banner.appendChild(bannerPic);
-
-var preOwnedJumbotron = document.createElement("div");
-preOwnedJumbotron.setAttribute("class","jumbotron text-center");
-var preOwnedDiv = document.createElement("div");
-preOwnedDiv.setAttribute("class","container");
-var preOwnedTitle = document.createElement("h1");
-preOwnedTitle.setAttribute("class","jumbotron-heading");
-preOwnedTitle.innerHTML = "Pre-Owned";
-preOwnedDiv.appendChild(preOwnedTitle);
-preOwnedJumbotron.appendChild(preOwnedDiv);
-//end preOwned Title
-
-var albumDiv = document.createElement("div");
-albumDiv.setAttribute("class","album py-5 bg-light");
-
-var container = document.createElement("div");
-container.setAttribute("class","container");
-var like = "https://s3-us-west-2.amazonaws.com/3110phase1/phase04/like.png";
-
-var row = document.createElement("div");
-row.setAttribute("class", "row");
+    //navbar end
 
 
-for(var i=0; i<images.length; i++)
-{
-
-    var col = document.createElement("div");
-    col.setAttribute("class", "col-sm-6");
-    
-    var title = document.createTextNode(caption[i]);
-    var l = document.createElement("p");
-    l.setAttribute("class","card-title");
-
-    console.log("image in iteration is " + images[i]);
-    url = "https://s3-us-west-2.amazonaws.com/3110phase1/phase06/" + images[i];
-    urlOfDetailPage = "detailPage6.html?" + "img=" + url + "&Caption=" + caption[i] + "&Description=" + description[i] + "&i=" + i;
-
-    var imgDiv = document.createElement("div");
-    imgDiv.setAttribute("class", "card bg-light mb-3");
-
-    var imgInDiv = document.createElement("img");
-    imgInDiv.setAttribute("class","card-img-top");
-    imgInDiv.setAttribute("src", url);
-
-    var link = document.createElement("a");
-    link.setAttribute("href", urlOfDetailPage);
-
-    var descriptionForCar = document.createTextNode(description[i]);
-    var d = document.createElement("P");
-    d.setAttribute("class", "card-text");
-
-    var gamePrice = document.createTextNode(price[i]);
-    var p = document.createElement("P");
-    p.setAttribute("class","card-text");
-
-    var onclickParam = "addToCartAlert()";
-
-    var addToCartButton = document.createElement("button");
-    addToCartButton.setAttribute("class","btn btn-danger");
-    addToCartButton.setAttribute("onclick", onclickParam);
-    addToCartButton.innerHTML = "ADD TO CART";
-
-    l.appendChild(title);
-    link.appendChild(imgInDiv);
-    d.appendChild(descriptionForCar);
-    p.appendChild(gamePrice);
-
-    imgDiv.appendChild(link);//image link
-    imgDiv.appendChild(l);//caption
-    imgDiv.appendChild(d);//description
-    imgDiv.appendChild(p);
-    imgDiv.appendChild(addToCartButton);
-
-
-    col.appendChild(imgDiv);
-    row.appendChild(col);
-    container.appendChild(row);
-
-}
-albumDiv.appendChild(container);
-
-document.body.appendChild(navbarHeader);
-document.body.appendChild(navbar);
-document.body.appendChild(banner);
-// document.body.appendChild(preOwnedJumbotron);
-document.body.appendChild(albumDiv);
-
-function addToCartAlert(){
-    alert("You add game to cart!");
-}
-
-
-
+    document.getElementById("navbar").appendChild(navbarHeader);
+    document.getElementById("navbar").appendChild(navbar);
+    //main change here!!!!
+    //append navbarHeader and navbar to body
 </script>
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
+    
 </html>

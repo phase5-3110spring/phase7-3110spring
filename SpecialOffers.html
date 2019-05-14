@@ -64,8 +64,9 @@
     var listList2 = document.createElement("li");
     var listList3 = document.createElement("li");
     var listList4 = document.createElement("li");
-    var list1 = document.createElement("a");
-    list1.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/testtermsofuse.html");//put in link
+    var listList5 = document.createElement("li");
+var list1 = document.createElement("a");
+list1.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/testtermsofuse.html");//put in link
 list1.setAttribute("class","text-white");
 list1.innerHTML = "Terms of Use";
 var list2 = document.createElement("a");
@@ -80,14 +81,20 @@ var list4 = document.createElement("a");
 list4.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/AboutUs.html");//put in link
 list4.setAttribute("class","text-white");
 list4.innerHTML = "About Us";
+var list5 = document.createElement("a");
+list5.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/testlogin.html");//put in link
+list5.setAttribute("class","text-white");
+list5.innerHTML = "Login";
 listList1.appendChild(list1);
 listList2.appendChild(list2);
 listList3.appendChild(list3);
 listList4.appendChild(list4);
+listList5.appendChild(list5);
 contactList.appendChild(listList1);
 contactList.appendChild(listList2);
 contactList.appendChild(listList3);
 contactList.appendChild(listList4);
+contactList.appendChild(listList5);
 contact.appendChild(contactTitle);
 contact.appendChild(contactList);
 navbarHeaderRow.appendChild(about);
@@ -99,14 +106,14 @@ navbar.setAttribute("class","navbar navbar-dark bg-dark shadow-sm");
 var navbarDiv = document.createElement("div");
 navbarDiv.setAttribute("class","container d-flex justify-content-between");
 var navbarLogo = document.createElement("a");
-navbarLogo.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/zgphase6.html");//put in link
+navbarLogo.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/zgphase6.html");//put in link
 navbarLogo.setAttribute('style', 'text-shadow: 3px 2px blue;', 'text-align: center');
 navbarLogo.style.height = '33px';
 navbarLogo.style.width = '90px';
 navbarLogo.style.border = '4px solid blue';
 navbarLogo.innerHTML = "GAME DEN";
 var navbarHome = document.createElement("a");
-navbarHome.setAttribute("href","");//put in link
+navbarHome.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/zgphase6.html");//put in link
 navbarHome.setAttribute("class","navbar-brand d-flex align-items-center");
 navbarHome.innerHTML = "Home";
 var navbarBest = document.createElement("a");
