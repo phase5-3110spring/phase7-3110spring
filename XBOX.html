@@ -5,10 +5,7 @@
 </head>
 
 <body>
-<div class="card" style="width: 100%;">
-  <img src="https://s3.us-east-2.amazonaws.com/cis3110wnmain/XB.png" class="card-img-top">
-  <div class="card-body">
-</div>
+
 </div>
     <!-- <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -43,149 +40,170 @@ var price =["$39.99","$29.99","$19.99","$39.99","$39.99","$59.99"];
 var url;
 
 
-var navbarHeader = document.createElement("div");
-navbarHeader.setAttribute("class","bg-dark collapse");
-navbarHeader.setAttribute("id","navbarHeader");
+ var navbarHeader = document.createElement("div");
+    navbarHeader.setAttribute("class","bg-dark collapse");
+    navbarHeader.setAttribute("id","navbarHeader");
+    var navbarHeaderDiv = document.createElement("div");
+    navbarHeaderDiv.setAttribute("class","container");
+    var navbarHeaderRow = document.createElement("div");
+    navbarHeaderRow.setAttribute("class","row");
+    var about = document.createElement("div");
+    about.setAttribute("class","col-sm-8 col-md-7 py-4");
+    var aboutTitle = document.createElement("h4");
+    aboutTitle.setAttribute("class","text-white");
+    aboutTitle.innerHTML = "About";
+    var aboutText = document.createElement("P");
+    aboutText.setAttribute("class","text-warning");
+    aboutText.innerHTML = "A selection of great DRM-free games, from modern hits to all-time classics, that you really shouldn't miss.";//put in about text
+    about.appendChild(aboutTitle);
+    about.appendChild(aboutText);
 
-var navbarHeaderDiv = document.createElement("div");
-navbarHeaderDiv.setAttribute("class","container");
-var navbarHeaderRow = document.createElement("div");
-navbarHeaderRow.setAttribute("class","row");
-
-var about = document.createElement("div");
-about.setAttribute("class","col-sm-8 col-md-7 py-4");
-
-var aboutTitle = document.createElement("h4");
-aboutTitle.setAttribute("class","text-white");
-aboutTitle.innerHTML = "About";
-
-var aboutText = document.createElement("P");
-aboutText.setAttribute("class","text-muted");
-aboutText.innerHTML = "our company ........blablabla";//put in about text
-
-about.appendChild(aboutTitle);
-about.appendChild(aboutText);
-
-var contact = document.createElement("div");
-contact.setAttribute("class","col-sm-4 offset-md-1 py-4");
-var contactTitle = document.createElement("h4");
-contactTitle.setAttribute("class","text-white");
-contactTitle.innerHTML = "Contact";
-
-var contactList = document.createElement("ul");
-contactList.setAttribute("class","list-unstyled");
-
-var listList1 = document.createElement("li");
-var listList2 = document.createElement("li");
-var listList3 = document.createElement("li");
-
-var list1 = document.createElement("a");
-list1.setAttribute("href",".html");//put in link
-list1.setAttribute("class","text-white");
-list1.innerHTML = "Terms of us";
-var list2 = document.createElement("a");
-list2.setAttribute("href",".html");//put in link
-list2.setAttribute("class","text-white");
-list2.innerHTML = "Contact us";
-var list3 = document.createElement("a");
-list3.setAttribute("href",".html");//put in link
-list3.setAttribute("class","text-white");
-list3.innerHTML = "Company overview";
-
-listList1.appendChild(list1);
-listList2.appendChild(list2);
-listList3.appendChild(list3);
-contactList.appendChild(listList1);
-contactList.appendChild(listList2);
-contactList.appendChild(listList3);
-contact.appendChild(contactTitle);
-contact.appendChild(contactList);
-
-navbarHeaderRow.appendChild(about);
-navbarHeaderRow.appendChild(contact);
-navbarHeaderDiv.appendChild(navbarHeaderRow);
-navbarHeader.appendChild(navbarHeaderDiv);
-
-
-var navbar = document.createElement("div");
-navbar.setAttribute("class","navbar navbar-dark bg-dark shadow-sm");
-var navbarDiv = document.createElement("div");
-navbarDiv.setAttribute("class","container d-flex justify-content-between");
-
-var navbarHome = document.createElement("a");
-navbarHome.setAttribute("href","");//put in link
-navbarHome.setAttribute("class","navbar-brand d-flex align-items-center");
-navbarHome.innerHTML = "Home";
-
-var navbarResearch = document.createElement("a");
-navbarResearch.setAttribute("href","#");//put in link
-navbarResearch.setAttribute("class","navbar-brand d-flex align-items-center");
-navbarResearch.innerHTML = "Research Articles";
-
-var navbarOffer = document.createElement("a");
-navbarOffer.setAttribute("href","#");//put in link
-navbarOffer.setAttribute("class","navbar-brand d-flex align-items-center");
-navbarOffer.innerHTML = "Special Offers";
-
-var navbarVehicles = document.createElement("div");
-navbarVehicles.setAttribute("class","dropdown");
-
-var vehicles = document.createElement("button");
-vehicles.setAttribute("class","btn btn-dark dropdown-toggle");
-vehicles.setAttribute("id","groupDrop");
-vehicles.setAttribute("data-toggle","dropdown");
-vehicles.setAttribute("aria-haspopup","true");
-vehicles.setAttribute("aria-expanded","false");
-vehicles.innerHTML = "Vehicles";
-
-var navbarOwners = document.createElement("a");
-navbarOwners.setAttribute("href","#");//put in link
-navbarOwners.setAttribute("class","navbar-brand d-flex align-items-center");
-navbarOwners.innerHTML = "Owners";
-
-var dropdownMenu = document.createElement("div");
-dropdownMenu.setAttribute("class","dropdown-menu");
-dropdownMenu.setAttribute("aria-labelledby","groupDrop");
-var dropdownItem1 = document.createElement("a");
-dropdownItem1.setAttribute("href","#");//put in link
-dropdownItem1.setAttribute("class","dropdown-item");
-dropdownItem1.innerHTML = "SUV";
-var dropdownItem2 = document.createElement("a");
-dropdownItem2.setAttribute("href","#");//put in link
-dropdownItem2.setAttribute("class","dropdown-item");
-dropdownItem2.innerHTML = "Couple";
-var dropdownItem3 = document.createElement("a");
-dropdownItem3.setAttribute("href","#");//put in link
-dropdownItem3.setAttribute("class","dropdown-item");
-dropdownItem3.innerHTML = "Sedan";
-
-dropdownMenu.appendChild(dropdownItem1);
-dropdownMenu.appendChild(dropdownItem2);
-dropdownMenu.appendChild(dropdownItem3);
-navbarVehicles.appendChild(vehicles);
-navbarVehicles.appendChild(dropdownMenu);
+    var contact = document.createElement("div");
+    contact.setAttribute("class","col-sm-4 offset-md-1 py-4");
+    var contactTitle = document.createElement("h4");
+    contactTitle.setAttribute("class","text-white");
+    contactTitle.innerHTML = "Contact";
+    var contactList = document.createElement("ul");
+    contactList.setAttribute("class","list-unstyled");
+    var listList1 = document.createElement("li");
+    var listList2 = document.createElement("li");
+    var listList3 = document.createElement("li");
+    var listList4 = document.createElement("li");
+    var list1 = document.createElement("a");
+    list1.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/testtermsofuse.html");//put in link
+    list1.setAttribute("class","text-white");
+    list1.innerHTML = "Terms of Use";
+    var list2 = document.createElement("a");
+    list2.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/testcontactus.html");//put in link
+    list2.setAttribute("class","text-white");
+    list2.innerHTML = "Contact Us";
+    var list3 = document.createElement("a");
+    list3.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/CompanyOverview.html");//put in link
+    list3.setAttribute("class","text-white");
+    list3.innerHTML = "Company Overview";
+    var list4 = document.createElement("a");
+    list4.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/AboutUs.html");//put in link
+    list4.setAttribute("class","text-white");
+    list4.innerHTML = "About Us";
+    listList1.appendChild(list1);
+    listList2.appendChild(list2);
+    listList3.appendChild(list3);
+    listList4.appendChild(list4);
+    contactList.appendChild(listList1);
+    contactList.appendChild(listList2);
+    contactList.appendChild(listList3);
+    contactList.appendChild(listList4);
+    contact.appendChild(contactTitle);
+    contact.appendChild(contactList);
+    navbarHeaderRow.appendChild(about);
+    navbarHeaderRow.appendChild(contact);
+    navbarHeaderDiv.appendChild(navbarHeaderRow);
+    navbarHeader.appendChild(navbarHeaderDiv);
+    var navbar = document.createElement("div");
+    navbar.setAttribute("class","navbar navbar-dark bg-dark shadow-sm");
+    var navbarDiv = document.createElement("div");
+    navbarDiv.setAttribute("class","container d-flex justify-content-between");
 
 
-var navbarButton = document.createElement("button");
-navbarButton.setAttribute("class","navbar-toggler collapsed");
-navbarButton.setAttribute("data-toggle", "collapse");
-navbarButton.setAttribute("data-target", "#navbarHeader"); 
-navbarButton.setAttribute("aria-controls", "navbarHeader");
-navbarButton.setAttribute("aria-expanded","true");
-navbarButton.setAttribute("aria-label","Toggle navigation");
 
-var buttonIcon = document.createElement("span");
-buttonIcon.setAttribute("class","navbar-toggler-icon");
-navbarButton.appendChild(buttonIcon);
 
-navbarDiv.appendChild(navbarHome);
-navbarDiv.appendChild(navbarResearch);
-navbarDiv.appendChild(navbarOffer);
-navbarDiv.appendChild(navbarVehicles);
-navbarDiv.appendChild(navbarOwners);
+    var navbarHome = document.createElement("a");
+    navbarHome.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/navBar.html");//put in link
+    navbarHome.setAttribute("class","navbar-brand d-flex align-items-center");
+    navbarHome.innerHTML = "hello";
 
-navbarDiv.appendChild(navbarButton);
-navbar.appendChild(navbarDiv);
+
+
+    var navbarHome = document.createElement("a");
+    navbarHome.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/zgphase6.html");//put in link
+    navbarHome.setAttribute("class","navbar-brand d-flex align-items-center");
+    navbarHome.innerHTML = "Home";
+
+
+
+    var navbarBest = document.createElement("a");
+    navbarBest.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/BestSellers.html");//put in link
+    navbarBest.setAttribute("class","navbar-brand d-flex align-items-center");
+    navbarBest.innerHTML = "Bestsellers";
+    var navbarOffer = document.createElement("a");
+    navbarOffer.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/SpecialOffers.html");//put in link
+    navbarOffer.setAttribute("class","navbar-brand d-flex align-items-center");
+    navbarOffer.innerHTML = "Special Offers";
+    var navbarInfo = document.createElement("div");
+    navbarInfo.setAttribute("class","dropdown");
+    var info = document.createElement("button");
+    info.setAttribute("class","btn btn-dark dropdown-toggle");
+    info.setAttribute("id","groupDrop");
+    info.setAttribute("data-toggle","dropdown");
+    info.setAttribute("aria-haspopup","true");
+    info.setAttribute("aria-expanded","false");
+    info.innerHTML = "Information";
+    var navbarEvent = document.createElement("a");
+    navbarEvent.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/Events.html");//put in link
+    navbarEvent.setAttribute("class","navbar-brand d-flex align-items-center");
+    navbarEvent.innerHTML = "Events";
+    var dropdownMenu = document.createElement("div");
+    dropdownMenu.setAttribute("class","dropdown-menu");
+    dropdownMenu.setAttribute("aria-labelledby","groupDrop");
+    var dropdownItem1 = document.createElement("a");
+    dropdownItem1.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110phase1/phase06/preOrder.html");//put in link
+    dropdownItem1.setAttribute("class","dropdown-item");
+    dropdownItem1.innerHTML = "Pre-Order";
+    var dropdownItem2 = document.createElement("a");
+    dropdownItem2.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110phase1/phase06/preOwned.html");//put in link
+    dropdownItem2.setAttribute("class","dropdown-item");
+    dropdownItem2.innerHTML = "Pre-Owned";
+    var dropdownItem3 = document.createElement("a");
+    dropdownItem3.setAttribute("href","https://s3-us-west-2.amazonaws.com/3110phase1/phase06/privacyPage.html");//put in link
+    dropdownItem3.setAttribute("class","dropdown-item");
+    dropdownItem3.innerHTML = "Privacy Policy";
+    var dropdownItem4 = document.createElement("a");
+    dropdownItem4.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/PC.html");//put in link
+    dropdownItem4.setAttribute("class","dropdown-item");
+    dropdownItem4.innerHTML = "PC";
+    var dropdownItem5 = document.createElement("a");
+    dropdownItem5.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/XBOX.html");//put in link
+    dropdownItem5.setAttribute("class","dropdown-item");
+    dropdownItem5.innerHTML = "Xbox";
+    var dropdownItem6 = document.createElement("a");
+    dropdownItem6.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/PS4.html");//put in link
+    dropdownItem6.setAttribute("class","dropdown-item");
+    dropdownItem6.innerHTML = "PS4";
+    var dropdownItem7 = document.createElement("a");
+    dropdownItem7.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/FAQ.html");//put in link
+    dropdownItem7.setAttribute("class","dropdown-item");
+    dropdownItem7.innerHTML = "FAQ";
+    var dropdownItem8 = document.createElement("a");
+    dropdownItem8.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/404.html");//put in link
+    dropdownItem8.setAttribute("class","dropdown-item");
+    dropdownItem8.innerHTML = "Free Stuff";
+    dropdownMenu.appendChild(dropdownItem1);
+    dropdownMenu.appendChild(dropdownItem2);
+    dropdownMenu.appendChild(dropdownItem3);
+    dropdownMenu.appendChild(dropdownItem4);
+    dropdownMenu.appendChild(dropdownItem5);
+    dropdownMenu.appendChild(dropdownItem6);
+    dropdownMenu.appendChild(dropdownItem7);
+    dropdownMenu.appendChild(dropdownItem8);
+    navbarInfo.appendChild(info);
+    navbarInfo.appendChild(dropdownMenu);
+    var navbarButton = document.createElement("button");
+    navbarButton.setAttribute("class","navbar-toggler collapsed");
+    navbarButton.setAttribute("data-toggle", "collapse");
+    navbarButton.setAttribute("data-target", "#navbarHeader");
+    navbarButton.setAttribute("aria-controls", "navbarHeader");
+    navbarButton.setAttribute("aria-expanded","true");
+    navbarButton.setAttribute("aria-label","Toggle navigation");
+    var buttonIcon = document.createElement("span");
+    buttonIcon.setAttribute("class","navbar-toggler-icon");
+    navbarButton.appendChild(buttonIcon);
+    navbarDiv.appendChild(navbarHome);
+    navbarDiv.appendChild(navbarBest);
+    navbarDiv.appendChild(navbarOffer);
+    navbarDiv.appendChild(navbarEvent);
+    navbarDiv.appendChild(navbarInfo);
+    navbarDiv.appendChild(navbarButton);
+    navbar.appendChild(navbarDiv);
 //navbar end
 
 var banner = document.createElement("div");
