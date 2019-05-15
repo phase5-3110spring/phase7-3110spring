@@ -228,6 +228,17 @@ var dropdownItem8 = document.createElement("a");
 dropdownItem8.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/404.html");//put in link
     dropdownItem8.setAttribute("class","dropdown-item");
     dropdownItem8.innerHTML = "Free Stuff";
+
+var dropdownItem9 = document.createElement("a");
+    dropdownItem9.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/testsuggestion.html");//put in link
+        dropdownItem9.setAttribute("class","dropdown-item");
+        dropdownItem9.innerHTML = "Suggestions";
+
+        var dropdownItem10 = document.createElement("a");
+            dropdownItem10.setAttribute("href","https://s3-us-west-2.amazonaws.com/da-dft/Phase+7/testawards.html");//put in link
+                dropdownItem10.setAttribute("class","dropdown-item");
+                dropdownItem10.innerHTML = "Awards";
+
     dropdownMenu.appendChild(dropdownItem1);
     dropdownMenu.appendChild(dropdownItem2);
     dropdownMenu.appendChild(dropdownItem3);
@@ -236,6 +247,8 @@ dropdownItem8.setAttribute("href","https://s3.amazonaws.com/3110.spring/Phase+7/
     dropdownMenu.appendChild(dropdownItem6);
     dropdownMenu.appendChild(dropdownItem7);
     dropdownMenu.appendChild(dropdownItem8);
+    dropdownMenu.appendChild(dropdownItem9);
+    dropdownMenu.appendChild(dropdownItem10);
     navbarInfo.appendChild(info);
     navbarInfo.appendChild(dropdownMenu);
     var navbarButton = document.createElement("button");
@@ -499,31 +512,6 @@ function showPage() {
   document.getElementById("myDiv").style.display = "block";
 }
 </script>
-
-<!-- Footer -->
-<footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5 class="text-md-right">Email Us</h5>
-                    <form>
-                        <fieldset class="form-group">
-                            <input type="name" class="form-control" id="Name" placeholder="Enter name">
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <input type="email" class="form-control" id="Email" placeholder="Enter email">
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <textarea class="form-control" id="Message" placeholder="Message"></textarea>
-                        </fieldset>
-                        <fieldset class="form-group text-xs-right">
-                            <button type="button" class="btn btn-secondary-outline btn-lg float-right">Send</button>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
